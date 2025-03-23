@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class MainManu : MonoBehaviour
 {
@@ -8,7 +7,7 @@ public class MainManu : MonoBehaviour
 
     public void  StartGame()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     public void EndGame()
     {

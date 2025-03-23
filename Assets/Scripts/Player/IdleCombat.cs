@@ -24,10 +24,10 @@ public class IdleCombat : MonoBehaviour
 
     void AttackEnemy()
     {
-        if (currentEnemy != null && Enemy.instance.health > 0)
+        if (currentEnemy != null && currentEnemy.health > 0)
         {
             action.Attack();
-            Transform EnemyTransform = Enemy.instance.transform;
+            Transform EnemyTransform = currentEnemy.transform;
             transform.LookAt(EnemyTransform.position );
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             AudioManager.instance.PlayShootSound();

@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    public static Enemy instance;
     public int health = 100;
     [SerializeField] Slider healthBar;
     [SerializeField] Transform firePoint;
@@ -16,7 +15,7 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+
     }
 
     private void Start()

@@ -2,7 +2,6 @@ using System;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 using TMPro;
 using UnityEngine.Networking;
 using System.Collections.Generic;
@@ -202,29 +201,21 @@ namespace HuggingFace.API
             string[] commandKeywords = {
                 // Offensive actions
                 "use", "cast", "attack", "fire", "shoot", "strike", "hit", "blast", "burn", "explode",
-                "launch", "throw", "smash", "punch", "kick", "slash", "stab", "pierce", "destroy",
+                "launch", "throw", "smash", "punch", "kick", "slash", "stab", "pierce", "destroy","fireball",
                 
                 // Defensive actions
                 "shield", "protect", "defend", "guard", "cover", "block", "dodge", "evade", "avoid",
                 "save", "help", "support", "heal", "healing", "buff", "buffing", "boost", "boosted",
                 
                 // Targeting
-                "target", "focus", "aim", "at", "towards", "against", "on", "onto", "into",
-                "enemy", "opponent", "foe", "monster", "boss", "creature", "demon", "dragon",
-                
-                // Combat state
-                "fight", "battle", "combat", "engage", "engage in", "start", "begin", "initiate",
-                
+                "target", "focus", "aim", "towards", "against","enemy", "opponent", "foe", "monster",
+                "boss", "creature", "demon", "dragon","fight","combat","initiate",
+                      
                 // Numbers and targeting specific enemies
                 "one", "two", "1", "2", "first", "second", "primary", "secondary",
                 
-                // Common combat phrases
-                "take down", "take out", "deal with", "handle", "finish off", "eliminate",
-                "get rid of", "remove", "destroy", "defeat", "beat", "overcome",
-                
                 // Support phrases
-                "back me up", "cover me", "watch my back", "protect me", "help me",
-                "give me cover", "keep me safe", "defend me", "save me"
+                "back me up","help me","give me cover", "keep me safe", "defend me", "save me"
             };
             string lowered = input.ToLower().Trim();
             return commandKeywords.Any(keyword => lowered.Contains(keyword));

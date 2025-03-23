@@ -66,7 +66,7 @@ namespace LLMUnityTests
             return Mathf.Abs(x1 - x2) < tolerance;
         }
 
-       
+        [UnityTest]
         public virtual IEnumerator RunTests()
         {
             Task task = RunTestsTask();

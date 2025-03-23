@@ -17,7 +17,7 @@ public class PlayerHealth : MonoBehaviour
     // Camera variables
     public Camera firstPersonCamera;
     public Camera thirdPersonCamera;
-    private bool isFirstPerson = true;
+    //private bool isFirstPerson = true;
     
     private void Awake() 
     { 
@@ -74,7 +74,7 @@ public class PlayerHealth : MonoBehaviour
         {
             firstPersonCamera.enabled = true;
             thirdPersonCamera.enabled = false;
-            isFirstPerson = true;
+            //isFirstPerson = true;
         }
     }
 
@@ -84,7 +84,7 @@ public class PlayerHealth : MonoBehaviour
         {
             firstPersonCamera.enabled = false;
             thirdPersonCamera.enabled = true;
-            isFirstPerson = false;
+            //isFirstPerson = false;
         }
     }
 
