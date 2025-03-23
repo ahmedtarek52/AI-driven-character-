@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private float bulletSpeed = 20, lifeTime=3;
+    private float bulletSpeed = 40, lifeTime=3;
     public Rigidbody rb;
     [SerializeField] int damage =5;
 
@@ -28,6 +28,11 @@ public class Bullet : MonoBehaviour
         if (other.gameObject.tag == "Enemy1" || other.gameObject.tag == "Enemy2")
         {
             other.gameObject.GetComponent<Enemy>().TakeDamage(damage);
+
+        }
+           if (other.gameObject.tag == "Player" )
+        {
+            other.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
 
         }
     
